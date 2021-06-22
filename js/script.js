@@ -20,7 +20,13 @@ const app = new Vue({
         },
         goTo(index) {
             this.counter = index;
+        },
+        autoFlow() {
+            setTimeout(next, 3000);
         }
-
-    }
+        
+    },
+    mounted: function () {
+          setInterval(this.next, 3000);
+      }
 });

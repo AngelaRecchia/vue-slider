@@ -15,8 +15,11 @@
 
         <div id="back" class="arrow" @click="back"><span class="iconify" data-icon="ion-chevron-back-outline" data-inline="false"></span></div>
 
-        <img id="image" :src="photos[counter]">
-
+        <div id="cont-img">
+            <div id="barTime"></div>
+            <img id="image" :src="photos[counter]">
+        </div>
+        
         <div id="next" class="arrow"  @click="next"><span class="iconify" data-icon="ion:chevron-forward" data-inline="false"></span></div>
 
         <div id="dots">
