@@ -13,12 +13,15 @@ const app = new Vue({
     methods: {
         next() {
             (this.counter == this.photos.length - 1) ? this.counter = 0 : this.counter++;
+            this.perc = 0;
         },
         back() {
             (this.counter == 0) ? this.counter = this.photos.length -1 : this.counter--;
+            this.perc = 0;
         },
         goTo(index) {
             this.counter = index;
+            this.perc = 0;
         },
         move() {
             this.perc++;
