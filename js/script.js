@@ -7,26 +7,29 @@ const app = new Vue({
             "https://source.unsplash.com/3dUpL1h97CQ/1600x900",
             "https://source.unsplash.com/yn97LNy0bao/1600x900"
         ],
-        counter: 0
+        counter: 0,
+        perc: 0,
     },
     methods: {
         next() {
             (this.counter == this.photos.length - 1) ? this.counter = 0 : this.counter++;
-            console.log(this.counter);
         },
         back() {
             (this.counter == 0) ? this.counter = this.photos.length -1 : this.counter--;
-            console.log(this.counter);
         },
         goTo(index) {
             this.counter = index;
         },
-        autoFlow() {
-            setTimeout(next, 3000);
+        move() {
+            this.perc++;
+            if(this.perc == 100) {
+                this.perc = 0;
+                this.next();
+            } 
+            document.getElementById("barTime").style.width = this.perc + "%";
         }
-        
     },
     mounted: function () {
-          setInterval(this.next, 3000);
+          setInterval(this.move, 30);
       }
 });

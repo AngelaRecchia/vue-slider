@@ -35,7 +35,8 @@ body {
 }
 
 #barTime {
-
+    height: 1%;
+    background-color: white;
 }
 
 #dots {
