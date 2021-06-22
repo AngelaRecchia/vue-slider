@@ -3,3 +3,22 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+#app {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#image {
+    width: 70%;
+    border: 40px solid black;
+}
+
+.arrow {
+    color: black;
+    font-size: 60px;
+    margin: 0 50px;
+
+}
