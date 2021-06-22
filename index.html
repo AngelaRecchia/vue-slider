@@ -6,15 +6,25 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
     <title>Slider</title>
 </head>
 <body>
     
     <div id="app">
-        <div id="back" class="arrow" @click="back"><i class="fas fa-chevron-circle-left"></i></div>
+
+        <div id="back" class="arrow" @click="back"><span class="iconify" data-icon="ion-chevron-back-outline" data-inline="false"></span></div>
+
         <img id="image" :src="photos[counter]">
-        <div id="next" class="arrow"  @click="next"><i class="fas fa-chevron-circle-right"></i></div>
+
+        <div id="next" class="arrow"  @click="next"><span class="iconify" data-icon="ion:chevron-forward" data-inline="false"></span></div>
+
+        <div id="dots">
+            <div id="dot" v-for="(photo, index) in photos" :class="(index == counter) ? 'selected' : '' " @click="goTo(index)">
+                <span class="iconify" data-icon="akar-icons:circle-fill" data-inline="false"></span>
+            </div>
+        </div>
+        
     </div>
 
     <script src="js/script.js"></script>

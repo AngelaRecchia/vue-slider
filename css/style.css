@@ -4,21 +4,43 @@
     box-sizing: border-box;
 }
 
+body {
+    background-color: black;
+}
+
 #app {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 100vh;
+    position: relative;
 }
 
 #image {
     width: 70%;
-    border: 40px solid black;
 }
 
 .arrow {
-    color: black;
-    font-size: 60px;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 80px;
     margin: 0 50px;
+}
 
+.arrow:hover {
+    color: white;
+}
+
+#dots {
+    position: absolute;
+    bottom: 10%;
+}
+
+#dot {
+    color: rgba(255, 255, 255, 0.5);
+    display: inline;
+    margin: 0 30px;
+}
+
+#dot.selected {
+    color: white;
 }

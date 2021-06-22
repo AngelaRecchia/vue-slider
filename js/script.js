@@ -17,6 +17,9 @@ const app = new Vue({
         back() {
             (this.counter == 0) ? this.counter = this.photos.length -1 : this.counter--;
             console.log(this.counter);
+        },
+        goTo(index) {
+            this.counter = index;
         }
 
     }
